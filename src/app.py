@@ -22,20 +22,31 @@ def main():
         user_input = input("You: ")
 
         if user_input.lower() in {"exit", "quit"}:
-            print("Goodbye ")
+            print("Goodbye")
             break
 
         # add user message to memory
         memory.add_user_message(user_input)
 
         # retrieve context from RAG
-        context = rag.retrieve(user_input)
+        context, is_relevant = rag.retrieve(user_input)
 
-        # build messages for LLM
+        # Gaudrails HARD STOP: out-of-scope question
+        if not is_relevant:
+            response = (
+                "I can help with questions related to our company and services, "
+                "but I don't have information on that topic."
+            )
+            print(f"\nAI: {response}\n")
+            memory.add_assistant_message(response)
+            continue
+
+        # build messages ONLY for valid support questions
         messages = memory.get_messages().copy()
+
         messages.append({
-            "role": "system",
-            "content": f"Relevant context:\n{context}"
+            "role": "user",
+            "content": f"Use the following company information to answer:\n{context}"
         })
 
         # call Groq LLM
@@ -48,7 +59,6 @@ def main():
         answer = response.choices[0].message.content
         print(f"\nAI: {answer}\n")
 
-        # save assistant response
         memory.add_assistant_message(answer)
 
         # simple escalation rule

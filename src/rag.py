@@ -1,4 +1,9 @@
 import os
+from typing import Tuple
+import warnings
+
+# suppress known benign chroma warning
+warnings.filterwarnings("ignore", category=UserWarning)
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -39,7 +44,24 @@ class RAG:
             embedding=self.embeddings,
             persist_directory=VECTOR_DB_DIR
         )
+    def retrieve(
+        self,
+        query: str,
+        k: int = 3,
+        min_score: float = 0.3
+    ) -> Tuple[str, bool]:
+        results = self.vectorstore.similarity_search_with_relevance_scores(
+            query, k=k
+        )
 
-    def retrieve(self, query: str, k: int = 3) -> str:
-        docs = self.vectorstore.similarity_search(query, k=k)
-        return "\n\n".join(doc.page_content for doc in docs)
+        relevant_docs = []
+
+        for doc, score in results:
+            score = max(0.0, min(score, 1.0))
+            if score >= min_score:
+                relevant_docs.append(doc.page_content)
+
+        if not relevant_docs:
+            return "", False
+
+        return "\n\n".join(relevant_docs), True
