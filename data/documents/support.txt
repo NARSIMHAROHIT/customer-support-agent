@@ -1,0 +1,157 @@
+📄 Knowledge Entry 1
+Question
+How do I reset my password?
+Answer
+Customers can reset their password by clicking “Forgot Password” on the login page. Enter the registered email address, and a password reset link will be sent within a few minutes. If the email does not arrive, customers should check their spam or junk folder. Password reset links expire after 24 hours.
+Category
+Account Access
+Intent
+reset_password
+Keywords
+password reset, forgot password, login issue
+Escalation Needed
+No
+📄 Knowledge Entry 2
+Question
+How can I cancel my subscription?
+Answer
+Customers can cancel their subscription at any time from their account dashboard. Navigate to Dashboard → Billing → Manage Subscription → Cancel. The subscription will remain active until the end of the current billing cycle. No refunds are issued for partially used periods.
+Category
+Billing
+Intent
+cancel_subscription
+Keywords
+cancel plan, billing, subscription end
+Escalation Needed
+No
+📄 Knowledge Entry 3
+Question
+Do you offer refunds?
+Answer
+Refunds are available only if requested within 7 days of the initial purchase. Refund requests submitted after 7 days are not eligible. To request a refund, customers must contact support with their order ID and registered email address.
+Category
+Payments & Refunds
+Intent
+refund_policy
+Keywords
+refund, money back, payment issue
+Escalation Needed
+Yes (manual review)
+📄 Knowledge Entry 4
+Question
+How can I contact customer support?
+Answer
+Customers can contact support by emailing support@company.com
+ or by submitting a ticket through the Help Center → Contact Us page. Support responses are typically provided within 24 business hours.
+Category
+Support
+Intent
+contact_support
+Keywords
+support email, help desk, contact
+Escalation Needed
+No
+📄 Knowledge Entry 5
+Question
+How do I update my email address?
+Answer
+Customers can update their email address from the account dashboard. Navigate to Dashboard → Account Settings → Profile Information, enter the new email address, and save the changes. A verification email may be sent to confirm the new address. Changes take effect immediately after verification.
+Category
+Account Management
+Intent
+update_email
+Keywords
+change email, update email, account email
+Escalation Needed
+No
+📄 Knowledge Entry 6
+Question
+Why am I not receiving verification emails?
+Answer
+If verification emails are not received, customers should first check their spam or junk folder. Ensure that the registered email address is correct and that email filters are not blocking messages from the company domain. Customers can request a new verification email from the account settings page.
+Category
+Account Access
+Intent
+email_verification_issue
+Keywords
+verification email, email not received, confirm account
+Escalation Needed
+No
+📄 Knowledge Entry 7
+Question
+How do I change my subscription plan?
+Answer
+Customers can change their subscription plan at any time from the dashboard. Navigate to Dashboard → Billing → Manage Subscription → Change Plan and select the desired plan. Plan changes take effect immediately, and any pricing differences are applied to the next billing cycle.
+Category
+Billing
+Intent
+change_subscription_plan
+Keywords
+upgrade plan, downgrade plan, subscription change
+Escalation Needed
+No
+📄 Knowledge Entry 8
+Question
+What payment methods do you accept?
+Answer
+The platform accepts major credit and debit cards, including Visa, MasterCard, and American Express. Some regions may also support additional payment methods. All payments are processed securely, and payment details are not stored on company servers.
+Category
+Payments
+Intent
+accepted_payment_methods
+Keywords
+payment options, credit card, billing methods
+Escalation Needed
+No
+📄 Knowledge Entry 9
+Question
+Why was my payment declined?
+Answer
+Payments may be declined due to insufficient funds, expired cards, incorrect billing information, or bank restrictions. Customers should verify their payment details and try again. If the issue persists, contacting the card issuer is recommended before reaching out to support.
+Category
+Payments
+Intent
+payment_declined
+Keywords
+payment failed, card declined, billing issue
+Escalation Needed
+Yes (if repeated failures)
+📄 Knowledge Entry 10
+Question
+How do I download my invoices?
+Answer
+Customers can download invoices from the account dashboard. Navigate to Dashboard → Billing → Invoices, select the desired invoice, and click Download. Invoices are available for all completed billing cycles.
+Category
+Billing
+Intent
+download_invoice
+Keywords
+invoice download, billing receipt, payment history
+Escalation Needed
+No
+📄 Knowledge Entry 11
+Question
+Can I reactivate a canceled subscription?
+Answer
+Customers can reactivate a canceled subscription before the end of the current billing cycle by visiting Dashboard → Billing → Manage Subscription → Reactivate. If the billing cycle has ended, customers must subscribe again to regain access.
+Category
+Billing
+Intent
+reactivate_subscription
+Keywords
+resume subscription, reactivate plan, canceled account
+Escalation Needed
+No
+📄 Knowledge Entry 12
+Question
+How do I delete my account?
+Answer
+Customers can request account deletion from Dashboard → Account Settings → Security → Delete Account. Account deletion is permanent and cannot be undone. All associated data will be removed in accordance with the company’s data retention policy.
+Category
+Account Management
+Intent
+delete_account
+Keywords
+close account, delete profile, remove data
+Escalation Needed
+Yes (confirmation required)
